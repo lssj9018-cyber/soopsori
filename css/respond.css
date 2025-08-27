@@ -1,0 +1,83 @@
+/* 1280px이하 */
+@media screen and (max-width:1280px) {
+  .main-menu {
+    gap: 3rem;
+  }
+
+  .gnb {
+    gap: 1.5rem;
+  }
+
+  section .title {
+    font-size: 3rem;
+  }
+
+  .only-tab-list li a {
+    padding: 0.9rem 1.2rem;
+  }
+
+}
+
+/* 1024px이하 */
+@media screen and (max-width:1024px) {
+  .inner{
+    padding: 0 20px;
+  }
+  /* 기본글자크기 14px */
+  html{
+    font-size: 14px;
+  }
+  /* 1. 제거하기 */
+  .main-menu{
+    display: none !important;
+  }
+  .m-hide{
+    display: none;
+  }
+  /* 2. 보이기 */
+  .ham-btn{
+    display: block;
+  }
+  /* 3. 100% 만들기 */
+
+  /* footer .inner에 준 flex를 취소하여 footer-left와 footer-right을 다른줄로 변경 flex 취소 */
+  footer .inner{
+    display: block;
+    padding: 3rem 20px;
+  }
+  .footer-right .sns-list{
+    /*sns 아이콘 위치 바꾸기 */
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+  .footer-right .footer-menu{
+    display: flex;
+    gap: 10px;
+
+    /* 메뉴끼리 떨어뜨리기 */
+    flex-wrap: wrap;
+
+  }
+}
+
+
+/* 768px이하 */
+@media screen and (max-width:768px) {
+  /* 기본글자크기 12px */
+  html{
+    font-size: 12px;
+  }
+  /* header .inner 줄간격 */
+  header .inner{
+    /* 모바일에서 line-height는 50~70px 사이 */
+    line-height: 56px;
+  }
+  /* logo 크기 줄이기 */
+  .logo img{
+    width: 110px;
+  }
+  /* 햄크기 줄이기 */
+  .ham-btn img{
+    width: 24px;
+  }
+}

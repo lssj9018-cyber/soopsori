@@ -1,0 +1,253 @@
+/* :root {
+  --main-color: #092729;
+  }
+
+.inner {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.title-box {
+  position: relative;
+  display: flex;
+}
+
+.title-box>.title {
+  font-size: 60px;
+}
+
+.title-box>.only-tab-list {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  margin: 26px 0;
+  right: 0;
+
+}
+
+.title-box>.only-tab-list>li>a {
+  border: 1px solid #000;
+  padding: 16px 30px;
+  border-radius: 30px;
+}
+
+.title-box>.only-tab-list>li>a:hover {
+  color: #fff;
+  background: var(--main-color);
+}
+
+.only-for-slider-wrap>.only-slider-list {
+  display: flex;
+}
+
+.only-for-slider-wrap>.only-slider-list img {
+  width: 100%;
+}
+
+.only-slider>.img-box .hover-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+} */
+.only-you-wrap .title {
+  margin-bottom: 0;
+}
+
+:root {
+  --main-color: #092729;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+
+  /* 위아래 가운데정렬 */
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.only-tab-list {
+  display: flex;
+  gap: 10px;
+}
+
+/* tab button */
+.only-tab-list li a {
+  display: block;
+  padding: 16px 24px;
+  border: 1px solid #092729;
+  border-radius: 30px;
+  font-size: 1.13rem;
+}
+
+.only-tab-list li a:hover {
+  background: #ddd;
+}
+
+.only-tab-list li.active a {
+  background: var(--main-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+.only-slider-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.only-slider-list>div {
+  position: relative;
+  /* border: 1px solid #000; */
+  padding: 2% 0;
+  border-radius: 40px 40px 0 40px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.only-slider-list>div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.only-slider-list>div .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.only-slider-list>div:hover .hover-img {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.only-slider-list>div .text-box {
+  position: absolute;
+  bottom: 50px;
+  /* left: 50%;
+  transform: translate(-50%); */
+  font-size: 18px;
+  /* background-color: rgba(0, 0, 255, 0.1); */
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+}
+
+.only-slider-list>div:hover .text-box {
+  color: #fff;
+}
+
+
+/* 더보기 버튼 시작*/
+.only-slider-list>div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background: var(--main-color) url(../images/arrow-right.svg) no-repeat center center;
+  z-index: 1000;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.only-slider-list>div:hover::after {
+  right: 0;
+  bottom: 0;
+}
+
+/* 더보기 버튼 끝*/
+
+
+/* 이미지 모서리 라운드 시작*/
+.only-slider-list>div .radius {
+  width: 75px;
+  height: 75px;
+  background: #6e6e6e;
+  background: #fff;
+  border-radius: 40px 0 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.only-slider-list>div .radius::before {
+  content: "";
+  display: block;
+  background: green;
+  /* 투명처리 */
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  left: -80px;
+  bottom: 0;
+  position: absolute;
+  box-shadow: 40px 40px 0 yellow;
+  box-shadow: 40px 40px 0 #fff;
+}
+
+.only-slider-list>div .radius::after {
+  content: "";
+  display: block;
+  background: hotpink;
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: -80px;
+  box-shadow: 40px 40px 0 orange;
+  box-shadow: 40px 40px 0 #fff;
+}
+
+/* 이미지 모서리 라운드 끝*/
+
+.sellection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sellection>div img {
+  width: 100%;
+  /* background: #ffb1b1; */
+}
+
+.sellection-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-left: 95px;
+}
+
+.text-box {
+  text-align: center;
+  font-size: 20px;
+}
+
+.text-box p {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+.text-box strong {
+  font-size: 2rem;
+}
+
+.text-box .more {
+  border-radius: 30px;
+  color: #fff;
+ display: inline-block;
+  background: var(--main-color);
+  padding: 12px 30px;
+}
